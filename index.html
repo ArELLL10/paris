@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paris Olympics 2024</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #0033a0, #ffcc00, #000000, #00a651, #ff0000);
+      background-size: 300% 300%;
+      animation: backgroundAnimation 10s infinite alternate;
+    }
+
+    @keyframes backgroundAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      color: #ffffff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      font-size: 3em;
+      margin: 20px 0;
+      animation: colorChange 5s infinite;
+    }
+
+    @keyframes colorChange {
+      0% { color: #0033a0; } /* Blue */
+      25% { color: #ffcc00; } /* Yellow */
+      50% { color: #000000; } /* Black */
+      75% { color: #00a651; } /* Green */
+      100% { color: #ff0000; } /* Red */
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      padding: 15px;
+      overflow: hidden; /* Prevent overflow from the marquee animation */
+      position: relative;
+    }
+
+    .marquee {
+      display: inline-block;
+      font-size: 2em;
+      padding: 20px 40px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #ffcc00, #0033a0);
+      background-size: 200% 200%;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
+      animation: bgShift 5s infinite alternate, marquee 10s linear infinite;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .marquee:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 30px rgba(255, 255, 255, 0.8), 0 0 15px #ff0000, 0 0 25px #00a651;
+    }
+
+    .marquee:active {
+      transform: scale(0.95);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+  </style>
+</head>
+<body>
+  <h1>PARIS 2024</h1>
+  <div class="container">
+    <div class="marquee">Welcome to the Paris Olympics 2024!</div>
+  </div>
+</body>
+</html>
